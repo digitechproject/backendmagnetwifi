@@ -1,14 +1,14 @@
 {
     "builds": [
       {
-        "src": "traitement.php", 
+        "src": "index.php", 
         "use": "@vercel/php"
       }
     ],
     "routes": [
       {
-        "src": "/traitement.php",
-        "dest": "/traitement.php"
+        "src": "/index.php",
+        "dest": "/index.php"
       },
       {
         "src": "/(.*)",
