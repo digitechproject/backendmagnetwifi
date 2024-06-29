@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "backendmagnetwifi",
     "builds": [
       {
         "src": "api/*.php",
@@ -12,11 +11,9 @@
       }
     ],
     "routes": [
-      { "src": "/api/index", "dest": "/api/index.php" },
-      { "src": "/api/formulaire", "dest": "/api/formulaire.php" },
-      { "src": "/api/traitement", "dest": "/api/traitement.php" },
-      { "src": "/api/succes", "dest": "/api/succes.php" },
+      { "src": "/api/(.*)", "dest": "/api/$1" },
       { "src": "/assets/(.*)", "dest": "/assets/$1" }
-    ]
+    ],
+    "buildCommand": "apt-get update && apt-get install -y libssl-dev && vercel build"
   }
   
