@@ -1,6 +1,6 @@
 <?php
 // index.php
-include 'formulaire.php';
+include './api/formulaire.php';
 ?>
 
 
