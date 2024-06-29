@@ -1,10 +1,22 @@
 {
-    "functions": {
-      "api/index.php": {
-        "runtime": "vercel-php@0.7.1"
+    "version": 2,
+    "name": "backendmagnetwifi",
+    "builds": [
+      {
+        "src": "api/*.php",
+        "use": "@vercel/php"
+      },
+      {
+        "src": "assets/*",
+        "use": "@vercel/static"
       }
-    },
+    ],
     "routes": [
-      { "src": "/(.*)",  "dest": "api/index.php" }
+      { "src": "/api/index", "dest": "/api/index.php" },
+      { "src": "/api/formulaire", "dest": "/api/formulaire.php" },
+      { "src": "/api/traitement", "dest": "/api/traitement.php" },
+      { "src": "/api/succes", "dest": "/api/succes.php" },
+      { "src": "/assets/(.*)", "dest": "/assets/$1" }
     ]
   }
+  
