@@ -11,10 +11,11 @@ RUN apt-get update && apt-get install -y \
 COPY . /var/www/html/
 
 # Configurer Apache pour pointer vers le dossier API
-RUN echo "RewriteEngine On\nRewriteCond %{REQUEST_FILENAME} !-f\nRewriteRule ^(api/.*)$ /api/index.php [QSA,L]" > /etc/apache2/sites-available/000-default.conf
-
-# Activer les modules Apache nécessaires
 RUN a2enmod rewrite
+RUN service apache2 restart
+
+# Ajouter la configuration Apache
+COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 
 # Exposer le port 80
 EXPOSE 80
