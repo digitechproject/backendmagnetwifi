@@ -1,20 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "traitement.php", 
-        "use": "@vercel/php@0.3.0"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/traitement.php",
-        "dest": "/traitement.php"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/$1" 
-      }
-    ]
+    "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.5.2"
+    }
   }
-  
+}
