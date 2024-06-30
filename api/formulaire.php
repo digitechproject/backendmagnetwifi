@@ -10,7 +10,7 @@ include(__DIR__ . '/../config/config.php');
 <html>
 <head>
     <title>WiFi Gratuit - Inscription</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
     <h2>Inscription WiFi Gratuit</h2>
@@ -34,6 +34,6 @@ include(__DIR__ . '/../config/config.php');
         <button type="submit">Soumettre</button>
     </form>
 
-    <script src="./assets/script.js"></script>
+    <script src="../assets/script.js"></script>
 </body>
 </html>

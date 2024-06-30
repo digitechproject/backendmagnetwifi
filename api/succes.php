@@ -10,7 +10,7 @@ $code_wifi = $_GET['code_wifi'];
 <html>
 <head>
     <title>WiFi Gratuit - Succès</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
     <h2>Félicitations !</h2>
@@ -20,6 +20,6 @@ $code_wifi = $_GET['code_wifi'];
     <p>Cliquez sur le bouton ci-dessous pour vous connecter automatiquement :</p>
     <a href="http://<?php echo ROUTER_IPP; ?>/login?username=<?php echo $code_wifi; ?>&password=<?php echo $code_wifi; ?>" class="btn-connect">Connexion</a>
 
-    <script src="./assets/script.js"></script>
+    <script src="../assets/script.js"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $API->disconnect();
 
         // Redirection vers la page de succès avec le code WiFi
-        header("Location: ./api/succes.php?code_wifi=$code_wifi");
+        header("Location: succes.php?code_wifi=$code_wifi");
         exit();
     } else {
         // Gestion de l'erreur de connexion au routeur
@@ -69,6 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } else {
     // Si le formulaire n'a pas été soumis, rediriger vers le formulaire
-    header("Location: ./api/formulaire.php");
+    header("Location: formulaire.php");
     exit();
 }
