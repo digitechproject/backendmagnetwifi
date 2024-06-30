@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "lead_magnet_server",
-  "builds": [
-    {
-      "src": "api/**/*.php",
-      "use": "@vercel/static-build"
-    }
-  ],
   "routes": [
     {
       "src": "/api/index.php",
@@ -23,6 +17,9 @@
     {
       "src": "/api/succes.php",
       "dest": "/api/succes.php"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
