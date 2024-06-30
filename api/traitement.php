@@ -2,8 +2,8 @@
 // traitement.php
 
 // Inclusion de la configuration et de la bibliothèque RouterOS
-include './config/config.php';
-include './config/routeros_api.class.php';
+include(__DIR__ . '/../config/config.php');
+include(__DIR__ . '/../config/routeros_api.class.php');
 
 // Vérification si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -1,6 +1,6 @@
 <?php
 // index.php
-include './api/formulaire.php';
+include(__DIR__ . '/formulaire.php');
 ?>
 
 

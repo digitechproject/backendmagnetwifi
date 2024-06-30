@@ -2,7 +2,7 @@
 // formulaire.php
 
 // Inclusion de la configuration générale
-include './config/config.php';
+include(__DIR__ . '/../config/config.php');
 
 ?>
 
@@ -14,7 +14,7 @@ include './config/config.php';
 </head>
 <body>
     <h2>Inscription WiFi Gratuit</h2>
-    <form action="./api/traitement.php" method="post">
+    <form action="traitement.php" method="post">
         <div>
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>

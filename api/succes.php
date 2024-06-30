@@ -1,6 +1,6 @@
 <?php
 // succes.php
-include './config/config.php';
+include(__DIR__ . '/../config/config.php');
 // Récupération du code WiFi depuis les paramètres de la requête
 $code_wifi = $_GET['code_wifi'];
 
