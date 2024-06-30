@@ -4,23 +4,7 @@
   "builds": [
     {
       "src": "api/**/*.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "api/index.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "api/formulaire.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "api/traitement.php",
-      "use": "@vercel/php"
-    },
-    {
-      "src": "api/succes.php",
-      "use": "@vercel/php"
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
