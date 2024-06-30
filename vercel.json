@@ -1,17 +1,44 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "Dockerfile",
-        "use": "@vercel/docker"
-      }
-    ],
-    "routes": [
-      { "src": "/api/index", "dest": "/api/index.php" },
-      { "src": "/api/formulaire", "dest": "/api/formulaire.php" },
-      { "src": "/api/traitement", "dest": "/api/traitement.php" },
-      { "src": "/api/succes", "dest": "/api/succes.php" },
-      { "src": "/assets/(.*)", "dest": "/assets/$1" }
-    ]
-  }
-  
+  "version": 2,
+  "name": "lead_magnet_server",
+  "builds": [
+    {
+      "src": "api/**/*.php",
+      "use": "@vercel/php"
+    },
+    {
+      "src": "api/index.php",
+      "use": "@vercel/php"
+    },
+    {
+      "src": "api/formulaire.php",
+      "use": "@vercel/php"
+    },
+    {
+      "src": "api/traitement.php",
+      "use": "@vercel/php"
+    },
+    {
+      "src": "api/succes.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/index.php",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/api/formulaire.php",
+      "dest": "/api/formulaire.php"
+    },
+    {
+      "src": "/api/traitement.php",
+      "dest": "/api/traitement.php"
+    },
+    {
+      "src": "/api/succes.php",
+      "dest": "/api/succes.php"
+    }
+  ]
+}
